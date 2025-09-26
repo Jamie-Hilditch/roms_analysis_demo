@@ -1,0 +1,26 @@
+[project]
+name = "roms-demo"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "cartopy>=0.25.0",
+    "cmocean>=4.0.3",
+    "dask-jobqueue>=0.9.0",
+    "matplotlib>=3.10.6",
+    "numpy>=2.2.6",
+    "pandas[all]>=2.3.2",
+    "pyarrow==19",
+    "python-dotenv>=1.1.1",
+    "scipy>=1.16.2",
+    "xarray[complete]>=2025.9.0",
+    "xcmocean>=0.3.2",
+    "xroms>=0.6.2",
+]
+
+[dependency-groups]
+dev = [
+    "ipykernel>=6.30.1",
+    "ruff>=0.13.1",
+]
