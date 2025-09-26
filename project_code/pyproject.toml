@@ -13,6 +13,7 @@ dependencies = [
     "pandas[all]>=2.3.2",
     "pyarrow==19",
     "python-dotenv>=1.1.1",
+    "sb-basin",
     "scipy>=1.16.2",
     "xarray[complete]>=2025.9.0",
     "xcmocean>=0.3.2",
@@ -24,3 +25,6 @@ dev = [
     "ipykernel>=6.30.1",
     "ruff>=0.13.1",
 ]
+
+[tool.uv.sources]
+sb-basin = { path = "../lib/sb_basin", editable = true }

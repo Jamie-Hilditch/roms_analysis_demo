@@ -3152,6 +3152,7 @@ dependencies = [
     { name = "pandas", extra = ["all"] },
     { name = "pyarrow" },
     { name = "python-dotenv" },
+    { name = "sb-basin" },
     { name = "scipy" },
     { name = "xarray", extra = ["complete"] },
     { name = "xcmocean" },
@@ -3174,6 +3175,7 @@ requires-dist = [
     { name = "pandas", extras = ["all"], specifier = ">=2.3.2" },
     { name = "pyarrow", specifier = "==19" },
     { name = "python-dotenv", specifier = ">=1.1.1" },
+    { name = "sb-basin", editable = "../lib/sb_basin" },
     { name = "scipy", specifier = ">=1.16.2" },
     { name = "xarray", extras = ["complete"], specifier = ">=2025.9.0" },
     { name = "xcmocean", specifier = ">=0.3.2" },
@@ -3237,6 +3239,24 @@ sdist = { url = "https://files.pythonhosted.org/packages/ee/f3/8e6371436666aedfd
 wheels = [
     { url = "https://files.pythonhosted.org/packages/37/b3/ca7d58ca25b1bb6df57e6cbd0ca8d6437a4b9ce1cd35adc8a6b2949c113b/s3fs-2025.9.0-py3-none-any.whl", hash = "sha256:c33c93d48f66ed440dbaf6600be149cdf8beae4b6f8f0201a209c5801aeb7e30", size = 30319, upload-time = "2025-09-02T19:18:20.563Z" },
 ]
+
+[[package]]
+name = "sb-basin"
+version = "0.1.0"
+source = { editable = "../lib/sb_basin" }
+dependencies = [
+    { name = "numpy" },
+    { name = "xarray" },
+]
+
+[package.metadata]
+requires-dist = [
+    { name = "numpy", specifier = ">=2" },
+    { name = "xarray", specifier = ">=2025.9.0" },
+]
+
+[package.metadata.requires-dev]
+dev = [{ name = "ruff", specifier = ">=0.13.2" }]
 
 [[package]]
 name = "scipy"
