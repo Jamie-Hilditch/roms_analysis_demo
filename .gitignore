@@ -2,3 +2,6 @@
 .venv
 .ipynb_checkpoints
 .ruff_cache
+uv.lock
+.env
+.python-version
