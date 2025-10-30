@@ -1,7 +1,7 @@
 [project]
-name = "sb-basin"
+name = "srridge"
 version = "0.1.0"
-description = "Add your description here"
+description = "Functions for loading Santa Rosa Ridge model output"
 readme = "README.md"
 authors = [
     { name = "Jamie", email = "hilditch@stanford.edu" }
