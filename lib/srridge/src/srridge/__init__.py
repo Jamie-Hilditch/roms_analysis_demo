@@ -1,9 +1,9 @@
 import pathlib
 import xarray as xr
 
-import open_dataset
+from . import open_dataset
 
-from open_dataset import get_grid_file, get_output_files
+from .open_dataset import get_grid_file, get_output_files
 
 __all__ = [
     "get_output_files",
