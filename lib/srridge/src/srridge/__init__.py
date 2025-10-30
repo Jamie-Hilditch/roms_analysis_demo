@@ -12,7 +12,7 @@ __all__ = [
 ]
 
 def open_santa_rosa_dataset(
-    his_files: list[pathlib.Path], grid_file: pathlib.Path | None = None
+    his_files: list[pathlib.Path], grid_file: pathlib.Path | None = None, chunks="auto"
 ) -> xr.Dataset:
     """Open ROMS his files, add s-coordinates and merge grid if given."""
     ds = xr.open_mfdataset(
@@ -23,6 +23,7 @@ def open_santa_rosa_dataset(
         combine="by_coords",
         data_vars="minimal",
         coords="minimal",
+        chunks=chunks,
     )
     ds = open_dataset.add_s_coordinates(ds)
     ds = open_dataset.add_grid_stretching(ds)
