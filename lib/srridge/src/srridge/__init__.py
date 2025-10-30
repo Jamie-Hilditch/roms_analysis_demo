@@ -24,6 +24,7 @@ def open_santa_rosa_dataset(
         data_vars="minimal",
         coords="minimal",
         chunks=chunks,
+        cache=True,
     )
     ds = open_dataset.add_s_coordinates(ds)
     ds = open_dataset.add_grid_stretching(ds)
