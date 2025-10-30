@@ -29,5 +29,6 @@ def open_santa_rosa_dataset(
     ds = open_dataset.add_grid_stretching(ds)
     if grid_file is not None:
         ds_grid = xr.open_dataset(grid_file,chunks=chunks)
+        ds_grid = ds_grid.set_coords(["lon_rho", "lat_rho", "lon_coarse", "lat_coarse"])
         ds = ds.merge(ds_grid)
     return ds
