@@ -1,6 +1,8 @@
 import pathlib
 import xarray as xr
 
+from dask.utils import SerializableLock
+
 from . import open_dataset
 
 from .open_dataset import get_grid_file, get_output_files
@@ -24,7 +26,8 @@ def open_santa_rosa_dataset(
         data_vars="minimal",
         coords="minimal",
         chunks=chunks,
-        cache=True,
+        parallel=False,
+        lock=SerializableLock(),
     )
     ds = open_dataset.add_s_coordinates(ds)
     ds = open_dataset.add_grid_stretching(ds)
